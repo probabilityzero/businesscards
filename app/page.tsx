@@ -50,7 +50,7 @@ export default function BusinessCard() {
       {/* Dark Mode Toggle */}
       <button
         onClick={toggleDarkMode}
-        className="fixed top-6 right-6 p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors z-50"
+        className="fixed top-6 right-6 p-2 rounded-lg hover:bg-secondary/80 transition-colors z-50"
         aria-label="Toggle dark mode"
       >
         {isDark ? <Sun size={20} /> : <Moon size={20} />}
