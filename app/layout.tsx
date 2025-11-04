@@ -17,7 +17,7 @@ const firaSans = Fira_Sans({
 
 export const metadata: Metadata = {
   title: 'Contact - Gyan Prakash Rungta',
-  description: 'Digital business card for Gyan Prakash Rungta, Managing Director at Spartan Ventures',
+  description: 'Digital business card of Gyan Prakash Rungta, Managing Director at Spartan Hazel Enterprises Pvt Ltd.',
   icons: {
     icon: [
       { url: '/favicon/favicon.ico' },
