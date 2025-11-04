@@ -27,7 +27,7 @@ export default function ProfileHeader({
         <img
           src={image}
           alt={name}
-          className="w-full aspect-video sm:aspect-21/9 object-cover rounded-t-xl shadow-2xl border-b-4 border-primary"
+          className="w-full aspect-video sm:aspect-21/9 px-4 bg-black object-cover rounded-t-xl shadow-2xl border-b-4 border-primary"
         />
         
         
