@@ -33,11 +33,11 @@ export default function ProfileHeader({
         
         {logo && (
           <div className="absolute bottom-0 right-6 sm:right-10 lg:right-12 transform translate-y-1/2 z-20">
-            <div className="p-2 bg-white rounded-xs shadow-sm hover:shadow-xl transition-shadow">
+            <div className="p-6 bg-white rounded-full shadow-sm hover:shadow-xl transition-shadow">
               <img
                 src={logo}
                 alt="Company Logo"
-                className="h-8 sm:h-12 lg:h-16 w-auto object-contain"
+                className="h-10 sm:h-14 lg:h-20 w-auto object-contain"
               />
             </div>
           </div>

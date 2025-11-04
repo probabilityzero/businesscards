@@ -60,7 +60,7 @@ TEL;TYPE=CELL:${cardData.phone}
 TEL;TYPE=WORK:${cardData.telephone}
 EMAIL:${cardData.email}
 ADR;TYPE=WORK:;;${cardData.address}
-URL:${window.location.href}
+URL:${cardData.social.website}
 END:VCARD`
     
     if (navigator.share && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
