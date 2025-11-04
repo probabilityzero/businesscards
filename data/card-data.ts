@@ -6,7 +6,7 @@ export const cardData = {
   phone: "+91 7080709006",
   telephone: "0120-3587473",
   location: "Noida, UP",
-  address: "B-26, First Floor, Office No. 04, Sector 02, Noida, Uttar Pradesh - 201301",
+  address: "B-26, First Floor, Office No. 04, Sector 02, Noida, UP - 201301, India",
   image: "/AdobeStock_210837268.jpg",
   logo: "/SH-logo.jpeg",
   logo2: "", 
