@@ -7,7 +7,7 @@ export const cardData = {
   telephone: "0120-3587473",
   location: "Noida, UP",
   address: "B-26, First Floor, Office No. 04, Sector 02, Noida, UP - 201301, India",
-  image: "/header-3x2.jpeg",
+  image: "/AdobeStock_210837268.jpg",
   logo: "/usha-sh-logo.jpeg",
   logo2: "", 
   tagline: "Brand Licensee of USHA SHRIRAM ENTERPRISES PVT LTD",
