@@ -7,7 +7,7 @@ export const cardData = {
   telephone: "0522-4001883",
   location: "Noida, UP",
   address: "A-139, Sector 63, Noida, UP 201307, India",
-  image: "https://www.cps.bureauveritas.com/sites/g/files/zypfnx236/files/2019-11/AdobeStock_210837268.jpg",
+  image: "/AdobeStock_210837268.jpg",
   logo: "/usha-shriram-logo.jpg",
   logo2: "", 
   tagline: "Brand Licensee of USHA SHRIRAM",

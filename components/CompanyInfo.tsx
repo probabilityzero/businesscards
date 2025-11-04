@@ -17,7 +17,7 @@ export default function CompanyInfo({
   className = "" 
 }: CompanyInfoProps) {
   return (
-    <div className={`group p-4 sm:p-5 bg-linear-to-br from-card/95 via-card to-primary/2 rounded-2xl border-l-4 border-primary shadow-xl hover:shadow-2xl transition-all duration-500 ${className}`}>
+    <div className={`group p-4 sm:p-5 bg-linear-to-br from-card/95 via-card to-primary/2 rounded-xl border-l-4 border-primary shadow-xl hover:shadow-2xl transition-all duration-500 ${className}`}>
       <div className="pb-3">
         <h2 className="text-2xl sm:text-3xl font-semibold uppercase text-primary font-[family-name:var(--font-fira-sans)]">
           {companyName}

@@ -33,7 +33,7 @@ export default function ProfileHeader({
         
         {logo && (
           <div className="absolute bottom-0 right-6 sm:right-10 lg:right-12 transform translate-y-1/2 z-20">
-            <div className="p-2 bg-white rounded-sm shadow-sm hover:shadow-xl transition-shadow">
+            <div className="p-2 bg-white rounded-xs shadow-sm hover:shadow-xl transition-shadow">
               <img
                 src={logo}
                 alt="Company Logo"
