@@ -2,75 +2,94 @@ export const cardData = {
   name: "Gyan Prakash Rungta",
   company: "SPARTAN VENTURES",
   title: "Managing Director",
-  email: "contact@spartanventures.in",
-  phone: "7080709006",
-  telephone: "0522 4001883",
+  email: "hr@ushaswitches.in",
+  phone: "+91 7080709006",
+  telephone: "0522-4001883",
   location: "Noida, UP",
   address: "A-139, Sector 63, Noida, UP-201307",
   image: "https://www.cps.bureauveritas.com/sites/g/files/zypfnx236/files/2019-11/AdobeStock_210837268.jpg",
-  logo: "https://www.usha.in/img/usha-shriram.jpg", 
+  logo: "/public/usha-shriram-logo.png",
   logo2: "", 
   tagline: "Brand Licensee of USHA SHRIRAM",
-  social: [
-    { name: "LinkedIn", url: "https://linkedin.com/company/spartanventures", icon: "linkedin" },
-    { name: "GitHub", url: "https://github.com/spartanventures", icon: "github" },
-    { name: "WhatsApp", url: "", icon: "messageCircle" }, 
-  ],
+  social: {
+    email: "hr@ushaswitches.in",
+    facebook: "",
+    instagram: "",
+    linkedin: "",
+    twitter: "",
+    website: "https://ushaswitches.in/",
+    whatsapp: "",
+  },
 }
 
-// Helper functions to keep main file clean
 export const cardHelpers = {
-  // Format phone number with country code
   getFormattedPhone: (phone: string) => {
     const cleaned = phone.replace(/\D/g, "")
     return cleaned.startsWith("91") ? `+${cleaned}` : `+91${cleaned}`
   },
 
-  // Generate tel: link
   getTelLink: (phone: string) => {
     return `tel:${cardHelpers.getFormattedPhone(phone)}`
   },
 
-  // Generate mailto: link
   getMailtoLink: (email: string) => {
     return `mailto:${email}`
   },
 
-  // Generate WhatsApp link
   getWhatsAppLink: (phone: string) => {
     const cleaned = phone.replace(/\D/g, "")
     const withCountryCode = cleaned.startsWith("91") ? cleaned : `91${cleaned}`
     return `https://wa.me/${withCountryCode}`
   },
 
-  // Generate Google Maps link
   getGoogleMapsLink: (address: string) => {
     return `https://www.google.com/maps/search/${encodeURIComponent(address)}`
   },
 
-  // Get social link with WhatsApp auto-generation
   getSocialLinks: () => {
-    return cardData.social.map(link => {
-      if (link.icon === "messageCircle" && !link.url) {
-        return {
-          ...link,
-          url: cardHelpers.getWhatsAppLink(cardData.phone)
-        }
-      }
-      return link
-    })
+    const links: Array<{ name: string; url: string; icon: "email" | "facebook" | "instagram" | "linkedin" | "twitter" | "website" | "whatsapp" }> = []
+    
+    if (cardData.social.email) {
+      links.push({ 
+        name: "Email", 
+        url: cardHelpers.getMailtoLink(cardData.social.email), 
+        icon: "email" 
+      })
+    }
+    if (cardData.social.facebook) {
+      links.push({ name: "Facebook", url: cardData.social.facebook, icon: "facebook" })
+    }
+    if (cardData.social.instagram) {
+      links.push({ name: "Instagram", url: cardData.social.instagram, icon: "instagram" })
+    }
+    if (cardData.social.linkedin) {
+      links.push({ name: "LinkedIn", url: cardData.social.linkedin, icon: "linkedin" })
+    }
+    if (cardData.social.twitter) {
+      links.push({ name: "Twitter", url: cardData.social.twitter, icon: "twitter" })
+    }
+    if (cardData.social.website) {
+      links.push({ name: "Website", url: cardData.social.website, icon: "website" })
+    }
+    if (cardData.social.whatsapp || cardData.phone) {
+      links.push({ 
+        name: "WhatsApp", 
+        url: cardData.social.whatsapp || cardHelpers.getWhatsAppLink(cardData.phone), 
+        icon: "whatsapp" 
+      })
+    }
+    
+    return links
   },
 
-  // Format phone for display
   getDisplayPhone: (phone: string) => {
     const cleaned = phone.replace(/\D/g, "")
     if (cleaned.length === 10) {
-      return cleaned.replace(/(\d{5})(\d{5})/, "$1$2")
+      return cleaned.replace(/(\d{5})(\d{5})/, "$1 $2")
     }
     return phone
   },
 
-  // Format telephone for display
   getDisplayTelephone: (telephone: string) => {
     return telephone
   }

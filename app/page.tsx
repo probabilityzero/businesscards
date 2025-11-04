@@ -5,6 +5,7 @@ import { FaMoon, FaSun, FaAddressBook } from "react-icons/fa"
 import { cardData, cardHelpers } from "@/data/card-data"
 import ProfileHeader from "@/components/ProfileInfo"
 import CompanyInfo from "@/components/CompanyInfo"
+import SocialLinks from "@/components/SocialLinks"
 import Tagline from "@/components/Tagline"
 import Divider from "@/components/Divider"
 
@@ -90,33 +91,32 @@ END:VCARD`
   const socialLinks = cardHelpers.getSocialLinks()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 text-foreground transition-colors duration-300 font-sans">
-      <div className="fixed top-4 right-4 flex gap-2 z-50">
-        <button
-          onClick={saveContact}
-          className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-secondary/80 backdrop-blur-sm hover:bg-secondary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          aria-label="Add to contacts"
-          title="Add to Contacts"
-        >
-          <FaAddressBook size={16} />
-          <span className="hidden sm:inline font-medium">Add to Contact</span>
-        </button>
-        {ENABLE_THEME_TOGGLE && (
-          <button
-            onClick={toggleDarkMode}
-            className="p-2 rounded-lg bg-secondary/80 backdrop-blur-sm hover:bg-secondary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            aria-label="Toggle dark mode"
-            title="Toggle Theme"
-          >
-            {isDark ? <FaSun size={16} /> : <FaMoon size={16} />}
-          </button>
-        )}
-      </div>
+    <div className="min-h-screen bg-linear-to-br from-background via-background to-secondary/20 text-foreground transition-colors duration-300 font-sans">
+      <main className="flex items-center justify-center min-dvh-screen p-4 sm:p-6 lg:p-8">
+          <div className="absolute top-6 right-6 sm:top-8 sm:right-8 flex gap-2 z-50">
+            <button
+              onClick={saveContact}
+              className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-secondary/80 backdrop-blur-sm hover:bg-secondary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              aria-label="Add to contacts"
+              title="Add to Contacts"
+            >
+              <FaAddressBook size={16} />
+              <span className="font-medium">Add to Contact</span>
+            </button>
+            {ENABLE_THEME_TOGGLE && (
+              <button
+                onClick={toggleDarkMode}
+                className="p-2 rounded-lg bg-secondary/80 backdrop-blur-sm hover:bg-secondary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                aria-label="Toggle dark mode"
+                title="Toggle Theme"
+              >
+                {isDark ? <FaSun size={16} /> : <FaMoon size={16} />}
+              </button>
+            )}
+          </div>
+        <div className="w-full max-w-3xl relative">
 
-      <main className="flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
-        <div className="w-full max-w-3xl">
-          <div className="relative bg-secondary/95 backdrop-blur-xl text-secondary-foreground px-6 sm:px-10 lg:px-12 py-8 sm:py-10 shadow-2xl rounded-3xl border-t-4 border-primary">
-            
+          <div className="relative bg-secondary/95 backdrop-blur-xl text-secondary-foreground px-6 sm:px-10 lg:px-12 py-8 sm:py-10 shadow-2xl rounded-xl border-primary">
             <ProfileHeader
               name={cardData.name}
               title={cardData.title}
@@ -136,6 +136,10 @@ END:VCARD`
                 className="mb-8"
               />
             )}
+
+            <Divider className="my-4" />
+
+            <SocialLinks links={socialLinks} className="" />
           </div>
 
           {cardData.tagline && (
