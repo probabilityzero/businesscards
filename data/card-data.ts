@@ -17,7 +17,7 @@ export const cardData = {
     instagram: "https://www.instagram.com/elsoreil",
     linkedin: "https://www.linkedin.com/in/sili-elena-9368aa68",
     twitter: "",
-    website: "https://elena.iprofile.online",
+    website: "",
     whatsapp: "https://wa.me/37368740001",
     telegram: "https://t.me/sorreil",
   },

@@ -16,8 +16,8 @@ const firaSans = Fira_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Gyan Prakash Rungta - Contact',
-  description: 'Managing Director at Spartan Hazel Enterprises Pvt Ltd.',
+  title: 'Elena Sîli - Contact',
+  description: 'Professional Translator & Interpreter',
   icons: {
     icon: [
       { url: '/favicon/favicon.ico' },
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
       { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
     other: [
-      { rel: 'mask-icon', url: '/favicon/safari-pinned-tab.svg', color: '#ED1C24' },
+      { rel: 'mask-icon', url: '/favicon/safari-pinned-tab.svg', color: '#01a1e2' },
     ],
   },
   manifest: '/favicon/site.webmanifest',
-  themeColor: '#ED1C24',
+  themeColor: '#01a1e2',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Gyan Prakash Rungta',
+    title: 'Elena Sîli',
   },
 }
 
@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="msapplication-TileColor" content="#ED1C24" />
+        <meta name="msapplication-TileColor" content="#01a1e2" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       </head>
       <body className={`${interTight.variable} ${firaSans.variable} font-sans antialiased`}>
