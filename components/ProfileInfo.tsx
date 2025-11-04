@@ -27,17 +27,17 @@ export default function ProfileHeader({
         <img
           src={image}
           alt={name}
-          className="w-full aspect-video sm:aspect-21/9 object-cover rounded-t-xl shadow-2xl border-b-4 border-sh-color"
+          className="w-full aspect-video sm:aspect-21/9 object-cover rounded-t-xl shadow-2xl border-b-4 border-primary"
         />
         
         
         {logo && (
-          <div className="absolute bottom-0 right-6 sm:right-10 lg:right-12 transform translate-y-1/2 z-20">
-            <div className="p-6 bg-white rounded-full shadow-sm hover:shadow-xl transition-shadow">
+          <div className="absolute bottom-2 right-6 sm:right-10 lg:right-12 transform translate-y-1/2 z-20">
+            <div className="p-0.5 bg-white rounded-xs shadow-sm hover:shadow-xl transition-shadow">
               <img
                 src={logo}
                 alt="Company Logo"
-                className="h-10 sm:h-14 lg:h-20 w-auto object-contain"
+                className="h-14 sm:h-16 lg:h-24 w-auto object-contain"
               />
             </div>
           </div>
