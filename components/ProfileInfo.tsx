@@ -37,7 +37,7 @@ export default function ProfileHeader({
               <img
                 src={logo}
                 alt="Company Logo"
-                className="h-14 sm:h-16 lg:h-24 w-auto object-contain"
+                className="h-16 sm:h-20 lg:h-24 w-auto object-contain"
               />
             </div>
           </div>
