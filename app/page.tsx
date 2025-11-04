@@ -124,7 +124,7 @@ END:VCARD`
               phoneHref={cardHelpers.getTelLink(cardData.phone)}
               image={cardData.image}
               logo={cardData.logo}
-              className="mb-8"
+              className="mb-10"
             />
 
             {cardData.company && (
@@ -133,7 +133,7 @@ END:VCARD`
                 address={cardData.address}
                 telephone={cardHelpers.getDisplayTelephone(cardData.telephone)}
                 addressHref={cardHelpers.getGoogleMapsLink(cardData.address)}
-                className="mb-8"
+                className="mb-6"
               />
             )}
 
