@@ -6,7 +6,7 @@ export const cardData = {
   phone: "+91 7080709006",
   telephone: "0522-4001883",
   location: "Noida, UP",
-  address: "A-139, Sector 63, Noida, Uttar Pradesh 201307, India",
+  address: "A-139, Sector 63, Noida, UP 201307, India",
   image: "https://www.cps.bureauveritas.com/sites/g/files/zypfnx236/files/2019-11/AdobeStock_210837268.jpg",
   logo: "/usha-shriram-logo.jpg",
   logo2: "", 

@@ -23,12 +23,13 @@ export default function ProfileHeader({
   return (
     <div className={`${className}`}>
       <div className="relative mb-0 group -mx-6 sm:-mx-10 lg:-mx-12 -mt-8 sm:-mt-10">
-        <div className="absolute inset-0 bg-linear-to-t from-secondary/50 to-transparent rounded-t-3xl z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+        <div className="absolute inset-0 bg-linear-to-t from-secondary/50 to-transparent rounded-t-3xl z-10 opacity-0 group-hover:opacity-10 transition-opacity duration-200" />
         <img
           src={image}
           alt={name}
           className="w-full aspect-video sm:aspect-21/9 object-cover rounded-t-xl shadow-2xl border-b-4 border-primary"
         />
+        
         
         {logo && (
           <div className="absolute bottom-0 right-6 sm:right-10 lg:right-12 transform translate-y-1/2 z-20">
@@ -44,7 +45,7 @@ export default function ProfileHeader({
       </div>
 
       <div className={`flex-1 animate-fade-in-up ${logo ? 'mt-8 sm:mt-10' : 'mt-4'}`}>
-        <h1 className="text-xl sm:text-2xl font-bold mb-1 bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+        <h1 className="text-xl sm:text-2xl font-semibold mb-0.5 bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
           {name}
         </h1>
         <p className="text-sm sm:text-base font-medium opacity-75 tracking-wide mb-2">{title}</p>

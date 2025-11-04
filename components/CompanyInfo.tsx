@@ -19,7 +19,7 @@ export default function CompanyInfo({
   return (
     <div className={`group p-4 sm:p-5 bg-linear-to-br from-card/95 via-card to-primary/2 rounded-2xl border-l-4 border-primary shadow-xl hover:shadow-2xl transition-all duration-500 ${className}`}>
       <div className="pb-3">
-        <h2 className="text-2xl sm:text-3xl font-bold uppercase text-primary font-[family-name:var(--font-fira-sans)]">
+        <h2 className="text-2xl sm:text-3xl font-semibold uppercase text-primary font-[family-name:var(--font-fira-sans)]">
           {companyName}
         </h2>
       </div>
@@ -33,10 +33,10 @@ export default function CompanyInfo({
             <MdCall size={18} className="text-white" />
           </div>
           <div className="flex-1 min-w-0 py-0.5">
-            <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.12em] opacity-50 font-bold mb-1 leading-none">
+            <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.12em] opacity-50 font-bold leading-none">
               Telephone
             </div>
-            <div className="text-xs sm:text-sm font-bold text-foreground leading-tight tracking-tight">
+            <div className="text-xs sm:text-sm font-medium text-foreground">
               {telephone}
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function CompanyInfo({
             <FaMapMarkerAlt size={16} className="text-white" />
           </div>
           <div className="flex-1 min-w-0 py-0.5">
-            <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.12em] opacity-50 font-bold mb-1 leading-none">
+            <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.12em] opacity-50 font-bold leading-none">
               Location
             </div>
             <div className="text-xs sm:text-sm font-semibold text-foreground/90 leading-snug">
