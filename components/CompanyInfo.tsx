@@ -17,7 +17,7 @@ export default function CompanyInfo({
   className = "" 
 }: CompanyInfoProps) {
   return (
-    <div className={`group p-4 sm:p-5 bg-linear-to-br from-card/95 via-card to-primary/2 rounded-xl border-l-4 border-primary shadow-xl hover:shadow-2xl transition-all duration-500 ${className}`}>
+    <div className={`group p-4 sm:p-5 bg-linear-to-br from-card/95 via-card to-primary/2 rounded-xl border-l-4 border-primary shadow-lg hover:shadow-xl transition-all duration-500 ${className}`}>
       <div className="pb-3">
         <h2 className="text-2xl sm:text-3xl font-semibold text-primary font-[family-name:var(--font-fira-sans)]">
           {companyName}
@@ -36,7 +36,7 @@ export default function CompanyInfo({
             <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.12em] opacity-50 font-bold leading-none">
               Telephone
             </div>
-            <div className="text-sm font-medium text-foreground">
+            <div className="text-sm font-semibold text-foreground">
               {telephone}
             </div>
           </div>
