@@ -1,9 +1,9 @@
 export const cardData = {
-  name: "Gyan Prakash Rungta",
+  name: "Md. Arif Azam",
   company: "Spartan Hazel Enterprises Pvt Ltd",
-  title: "Managing Director",
+  title: "National Sales Head",
   email: "hr@ushaswitches.in",
-  phone: "+91 7080709006",
+  phone: "+91 7903662757",
   telephone: "0120-3587473",
   location: "Noida, UP",
   address: "B-26, First Floor, Office No. 04, Sector 02, Noida, UP - 201301, India",

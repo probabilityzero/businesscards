@@ -16,8 +16,8 @@ const firaSans = Fira_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Gyan Prakash Rungta - Contact',
-  description: 'Managing Director at Spartan Hazel Enterprises Pvt Ltd.',
+  title: 'Md. Arif Azam - Contact',
+  description: 'National Sales Head at Spartan Hazel Enterprises Pvt Ltd.',
   icons: {
     icon: [
       { url: '/favicon/favicon.ico' },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Gyan Prakash Rungta',
+    title: 'Md. Arif Azam',
   },
 }
 
