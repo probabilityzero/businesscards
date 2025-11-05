@@ -9,7 +9,7 @@ export const cardData = {
   address: "B-26, First Floor, Office No. 04, Sector 02, Noida, UP - 201301, India",
   image: "/sh-goup-logo.jpeg",
   logo: "/usha-logo.jpeg",
-  logo2: "/SH-logo.jpeg", 
+  logo2: "/bw-sh-logo.jpeg", 
   tagline: "Brand Licensee of USHA SHRIRAM ENTERPRISES PVT LTD",
   social: {
     email: "hr@ushaswitches.in",
