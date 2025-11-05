@@ -19,7 +19,7 @@ export default function CompanyInfo({
   className = "" 
 }: CompanyInfoProps) {
   return (
-    <div className={`group p-4 sm:p-5 bg-linear-to-br from-card/95 via-card to-sh-color/2 rounded-xl border-l-4 border-sh-color shadow-sm hover:shadow-md transition-all duration-500 ${className}`}>
+    <div className={`group p-4 sm:p-5 bg-linear-to-br from-card/95 via-card to-sh-color/2 rounded-xl border-l-4 border-primary shadow-sm hover:shadow-md transition-all duration-500 ${className}`}>
       <div className="pb-3 flex items-center gap-2">
         {logo2 && (
           <img
