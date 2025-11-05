@@ -124,6 +124,7 @@ END:VCARD`
               phoneHref={cardHelpers.getTelLink(cardData.phone)}
               image={cardData.image}
               logo={cardData.logo}
+              logo2={cardData.logo2}
               className="mb-10"
             />
 
