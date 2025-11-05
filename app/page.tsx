@@ -7,7 +7,7 @@ import ProfileHeader from "@/components/ProfileInfo"
 import CompanyInfo from "@/components/CompanyInfo"
 import SocialLinks from "@/components/SocialLinks"
 import Tagline from "@/components/Tagline"
-import Divider from "@/components/Divider"
+import Divider from "@/components/ui/Divider"
 
 const ENABLE_THEME_TOGGLE = process.env.NEXT_PUBLIC_ENABLE_THEME_TOGGLE === 'true'
 const DEFAULT_THEME = process.env.NEXT_PUBLIC_DEFAULT_THEME || 'light'
@@ -125,7 +125,7 @@ END:VCARD`
               image={cardData.image}
               logo={cardData.logo}
               logo2={cardData.logo2}
-              className="mb-10"
+              className="mb-8"
             />
 
             {cardData.company && (
@@ -135,6 +135,7 @@ END:VCARD`
                 telephone={cardHelpers.getDisplayTelephone(cardData.telephone)}
                 addressHref={cardHelpers.getGoogleMapsLink(cardData.address)}
                 className="mb-6"
+                logo2={cardData.logo2}
               />
             )}
 

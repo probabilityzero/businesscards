@@ -29,11 +29,11 @@ export default function ProfileHeader({
         <img
           src={image}
           alt={name}
-          className="w-full aspect-video sm:aspect-21/9 px-2 bg-black object-cover rounded-t-xl shadow-2xl border-b-4 border-primary"
+          className="w-full aspect-video sm:aspect-21/9 px-2 bg-white object-cover rounded-t-xl border-b-4 border-primary"
         />
         
         
-        {logo2 && (
+        {/* {logo2 && (
           <div className="absolute bottom-4 left-8 sm:right-32 lg:right-36 transform translate-y-1/2 z-20">
             <img
               src={logo2}
@@ -41,7 +41,7 @@ export default function ProfileHeader({
               className="h-14 sm:h-16 p-1 bg-white lg:h-20 rounded-full w-auto object-contain"
             />
           </div>
-        )}
+        )} */}
         
         {logo && (
           <div className="absolute bottom-2 right-6 sm:right-10 lg:right-12 transform translate-y-1/2 z-20">
@@ -49,7 +49,7 @@ export default function ProfileHeader({
               <img
                 src={logo}
                 alt="Company Logo"
-                className="h-8 sm:h-10 lg:h-12 w-auto object-contain"
+                className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
               />
             </div>
           </div>
