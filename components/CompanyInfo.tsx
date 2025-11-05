@@ -25,7 +25,7 @@ export default function CompanyInfo({
           <img
             src={logo2}
             alt="Company Logo"
-            className="h-8 sm:h-10 rounded-full object-contain shadow-md"
+            className="h-8 sm:h-10 rounded-full object-contain"
           />
         )}
         <h2 className="text-2xl sm:text-3xl font-semibold text-sh-color font-[family-name:var(--font-fira-sans)]">
