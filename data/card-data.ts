@@ -12,7 +12,7 @@ export const cardData = {
   logo2: "/bw-sh-logo.jpeg", 
   tagline: "Brand Licensee of USHA SHRIRAM ENTERPRISES PVT LTD",
   social: {
-    email: "hr@ushaswitches.in",
+    email: "gyan@ushaswitches.in",
     facebook: "",
     instagram: "",
     linkedin: "",
