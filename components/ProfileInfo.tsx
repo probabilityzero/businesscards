@@ -8,7 +8,7 @@ interface ProfileHeaderProps {
   phoneHref: string;
   image: string;
   logo?: string;
-  logo2?: string;
+  headshot?: string;
   className?: string;
 }
 
@@ -19,7 +19,7 @@ export default function ProfileHeader({
   phoneHref,
   image,
   logo,
-  logo2,
+  headshot: headshot,
   className = "",
 }: ProfileHeaderProps) {
   return (
@@ -29,34 +29,34 @@ export default function ProfileHeader({
         <img
           src={image}
           alt={name}
-          className="w-full aspect-video sm:aspect-21/9 px-2 bg-white object-cover rounded-t-xl border-b-4 border-primary"
+          className="w-full aspect-video sm:aspect-21/9 object-cover rounded-t-xl border-b-4 border-primary"
         />
         
         
-        {/* {logo2 && (
+        {headshot && (
           <div className="absolute bottom-4 left-8 sm:right-32 lg:right-36 transform translate-y-1/2 z-20">
             <img
-              src={logo2}
-              alt="Company Logo 2"
-              className="h-14 sm:h-16 p-1 bg-white lg:h-20 rounded-full w-auto object-contain"
+              src={headshot}
+              alt="Headshot"
+              className="h-16 sm:h-20 p-1 bg-white lg:h-24 rounded-full w-auto object-contain"
             />
           </div>
-        )} */}
+        )}
         
         {logo && (
           <div className="absolute bottom-2 right-6 sm:right-10 lg:right-12 transform translate-y-1/2 z-20">
-            <div className="p-1 bg-white rounded-xs shadow hover:shadow-xl transition-shadow">
+            <div className="p-1 bg-white rounded-full shadow hover:shadow-xl transition-shadow">
               <img
                 src={logo}
                 alt="Company Logo"
-                className="h-14 sm:h-16 lg:h-20 w-auto object-contain"
+                className="rounded-full h-16 sm:h-20 lg:h-24 w-auto object-contain"
               />
             </div>
           </div>
         )}
       </div>
 
-      <div className={`flex-1 animate-fade-in-up ${logo || logo2 ? 'mt-6 sm:mt-8' : 'mt-4'}`}>
+      <div className={`flex-1 animate-fade-in-up ${logo || headshot ? 'mt-6 sm:mt-8' : 'mt-4'}`}>
         <h1 className="text-xl sm:text-2xl font-semibold mb-0.5 bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
           {name}
         </h1>

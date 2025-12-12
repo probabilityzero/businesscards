@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { FaMoon, FaSun, FaAddressBook } from "react-icons/fa"
-import { cardData, cardHelpers } from "@/data/card-data"
+import { cardData, cardHelpers } from "@/lib/card-data"
 import ProfileHeader from "@/components/ProfileInfo"
 import CompanyInfo from "@/components/CompanyInfo"
 import SocialLinks from "@/components/SocialLinks"
@@ -124,7 +124,7 @@ END:VCARD`
               phoneHref={cardHelpers.getTelLink(cardData.phone)}
               image={cardData.image}
               logo={cardData.logo}
-              logo2={cardData.logo2}
+              headshot={cardData.headshot}
               className="mb-8"
             />
 
