@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { FaMoon, FaSun, FaAddressBook } from "react-icons/fa"
-import { cardData, cardHelpers } from "@/data/card-data"
+import { cardData, cardHelpers } from "@/lib/card-data"
 import ProfileHeader from "@/components/ProfileInfo"
 import CompanyInfo from "@/components/CompanyInfo"
 import SocialLinks from "@/components/SocialLinks"
