@@ -8,6 +8,7 @@ import CompanyInfo from "@/components/CompanyInfo";
 import SocialLinks from "@/components/SocialLinks";
 import Tagline from "@/components/Tagline";
 import Divider from "@/components/ui/Divider";
+import ContactInfo from "@/components/ContactInfo";
 
 const ENABLE_THEME_TOGGLE = process.env.NEXT_PUBLIC_ENABLE_THEME_TOGGLE === "true";
 const DEFAULT_THEME = process.env.NEXT_PUBLIC_DEFAULT_THEME || "light";
@@ -127,11 +128,11 @@ END:VCARD`;
                 className="w-full aspect-video sm:aspect-21/9 object-cover rounded-t-xl border-b-4 border-primary"
               />
               {cardData.headshot && (
-                <div className="absolute bottom-4 left-8 sm:right-32 lg:right-36 transform translate-y-1/2 z-20">
+                <div className="absolute bottom-4 left-12 sm:right-32 lg:right-36 transform translate-y-1/2 z-20">
                   <img
                     src={cardData.headshot}
                     alt="Headshot"
-                    className="h-16 sm:h-20 p-1 bg-white lg:h-24 rounded-full w-auto object-contain"
+                    className="h-16 sm:h-20 p-1 bg-primary lg:h-24 rounded-full w-auto object-contain"
                   />
                 </div>
               )}
@@ -147,8 +148,8 @@ END:VCARD`;
                 </div>
               )}
             </div>
-            <div className={`flex-1 animate-fade-in-up ${cardData.logo || cardData.headshot ? "mt-6 sm:mt-8" : "mt-4"}`}>
-              <h1 className="text-xl sm:text-2xl font-semibold mb-0.5 bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <div className={`flex-1 animate-fade-in-up mb-6 ${cardData.logo || cardData.headshot ? "mt-6 sm:mt-8" : "mt-4"}`}>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-0.5 bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 {cardData.name}
               </h1>
               <p className="text-sm sm:text-base font-medium opacity-75 tracking-wide mb-2">{cardData.title}</p>
@@ -156,10 +157,21 @@ END:VCARD`;
                 href={cardHelpers.getTelLink(cardData.phone)}
                 className="inline-flex items-center gap-1 hover:opacity-70 transition-opacity"
               >
-                <BsFillTelephoneFill className="text-base sm:text-lg" />
                 <span className="text-sm sm:text-base font-medium">{cardHelpers.getDisplayPhone(cardData.phone)}</span>
               </a>
             </div>
+
+            <Divider className="my-4" />
+            
+
+            <ContactInfo
+              email={cardData.email}
+              phone={cardHelpers.getDisplayPhone(cardData.phone)}
+              telephone={cardHelpers.getDisplayTelephone(cardData.telephone)}
+              address={cardData.address}
+              className="mb-6"
+            />
+
             {cardData.company && (
               <CompanyInfo
                 companyName={cardData.company}
@@ -170,7 +182,7 @@ END:VCARD`;
                 logo2={cardData.logo2}
               />
             )}
-            <Divider className="my-4" />
+
             <SocialLinks links={socialLinks} className="" />
           </div>
           {cardData.tagline && (
